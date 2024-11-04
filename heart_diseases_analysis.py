@@ -36,3 +36,5 @@ def clean_data(df):
     df['target'] = df['target'].map({1: 'Disease', 0: 'No Disease'})
 
     return df
+
+df = clean_data(df)
