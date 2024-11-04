@@ -57,3 +57,14 @@ plt.xlabel('Cholesterol (mg/dl)')
 plt.ylabel('Resting Blood Pressure (mm Hg)')
 plt.savefig('cholesterol_bp_scatter.png')
 plt.show()
+
+# Plot 3: Correlation Heatmap
+numerical_cols = df.select_dtypes(include=['float64', 'int64']).columns
+correlation_matrix = df[numerical_cols].corr()
+
+plt.figure(figsize=(12, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', center=0)
+plt.title('Correlation Heatmap of Numerical Variables')
+plt.tight_layout()
+plt.savefig('correlation_heatmap.png')
+plt.show()
