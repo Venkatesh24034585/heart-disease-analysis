@@ -68,3 +68,9 @@ plt.title('Correlation Heatmap of Numerical Variables')
 plt.tight_layout()
 plt.savefig('correlation_heatmap.png')
 plt.show()
+
+# Save plots for report
+from google.colab import files
+files.download('age_distribution.png')
+files.download('cholesterol_bp_scatter.png')
+files.download('correlation_heatmap.png')
