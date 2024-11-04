@@ -11,3 +11,16 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
 import warnings
 warnings.filterwarnings('ignore')
+
+# Load the dataset
+df = pd.read_csv('heart.csv')
+
+# Display first few rows and basic information
+print("First few rows of the dataset:")
+display(df.head())
+
+print("\nDataset Info:")
+display(df.info())
+
+print("\nBasic Statistics:")
+display(df.describe())
