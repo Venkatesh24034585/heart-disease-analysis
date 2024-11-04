@@ -47,3 +47,13 @@ plt.xlabel('Age')
 plt.ylabel('Count')
 plt.savefig('age_distribution.png')
 plt.show()
+
+# Plot 2: Cholesterol vs Blood Pressure (Scatter Plot)
+plt.figure(figsize=(10, 6))
+sns.scatterplot(data=df, x='chol', y='trestbps', hue='target',
+                style='sex', s=100)
+plt.title('Cholesterol vs Blood Pressure by Disease Status and Gender')
+plt.xlabel('Cholesterol (mg/dl)')
+plt.ylabel('Resting Blood Pressure (mm Hg)')
+plt.savefig('cholesterol_bp_scatter.png')
+plt.show()
