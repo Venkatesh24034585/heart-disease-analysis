@@ -24,3 +24,15 @@ display(df.info())
 
 print("\nBasic Statistics:")
 display(df.describe())
+
+# Data Cleaning and Preparation
+def clean_data(df):
+    # Check for missing values
+    print("\nMissing Values:")
+    display(df.isnull().sum())
+
+    # Convert categorical variables
+    df['sex'] = df['sex'].map({1: 'MALE', 0: 'FEMALE'})
+    df['target'] = df['target'].map({1: 'Disease', 0: 'No Disease'})
+
+    return df
