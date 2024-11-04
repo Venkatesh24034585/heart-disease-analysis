@@ -38,3 +38,12 @@ def clean_data(df):
     return df
 
 df = clean_data(df)
+
+# Plot 1: Age Distribution (Histogram)
+plt.figure(figsize=(10, 6))
+sns.histplot(data=df, x='age', hue='target', multiple="layer", bins=30)
+plt.title('Age Distribution by Heart Disease Status')
+plt.xlabel('Age')
+plt.ylabel('Count')
+plt.savefig('age_distribution.png')
+plt.show()
